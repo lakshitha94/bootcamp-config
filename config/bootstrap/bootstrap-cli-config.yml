@@ -65,6 +65,15 @@ bootstrap:
               - cdf-group: cdf:all:read
                 idp-source-id: dcc7a268-9561-489b-a298-f218e4e5be7e
                 idp-source-name: bootcamp-all-read
+              - cdf-group: cdf:uc:001:oee:owner
+                idp-source-id: fdc3ca7b-8b30-4306-90dd-62ac8ea9e81f
+                idp-source-name: bootcamp-uc-001-oee-owner
+              - cdf-group: cdf:uc:001:oee:read
+                idp-source-id: 1d33ee86-f9dc-4813-8482-051d387c6a53
+                idp-source-name: bootcamp-uc-001-oee-read
+              - cdf-group: cdf:src:003:test-app:owner
+                idp-source-id: 2a643471-342b-4e8a-a683-41c51c94b6a6
+                idp-source-name: bootcamp-src-003-testapp
 
     namespaces:
         # Typical config will have separate namespace by data source ("src") and use cases ("uc")
@@ -76,6 +85,8 @@ bootstrap:
                 description: Source 01 data from SAP
               - node-name: src:002:opcua
                 description: Source 02 data from opcua
+              - node-name: src:003:test-app
+                description: Source 03 data from test-app
         - ns-name: uc
           description: Use cases representing the data/products
           ns-nodes:
