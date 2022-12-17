@@ -52,4 +52,12 @@ rawdbs:
             pipelines:
                 - source: ice-cream-api
                   schedule: On trigger
+    - rawdb-name: src:002:opcua:db
+      dataset-external-id: src:002:opcua:ds
+      short-name: opcua
+      rawtables:
+          - rawtable-name: datapoints
+            pipelines:
+                - source: ice-cream-api
+                  schedule: On trigger
                   
