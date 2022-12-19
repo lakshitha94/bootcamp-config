@@ -1,0 +1,23 @@
+---
+# Manifest file downloaded from fusion
+externalId: tr-ts_assets_mapping
+name: ts_assets_mapping
+query:
+    file: transformation.sql
+destination:
+    type: timeseries
+ignoreNullFields: true
+shared: true
+action: update
+dataSetExternalId: uc:001:oee:ds
+# together like this:
+authentication:
+    clientId: ${COGNITE_CLIENT_ID}
+    clientSecret: ${COGNITE_CLIENT_SECRET}
+    tokenUrl: https://login.microsoftonline.com/b429f458-5124-448f-b1ff-5d8cb1bcfda4/oauth2/v2.0/token
+  # Optional: If idP requires providing the scopes
+    cdfProjectName: ${CDF_PROJECT_NAME}
+    scopes:
+        - https://bluefield.cognitedata.com/.default
+#   # Optional: If idP requires providing the audience
+#   audience: ${AUDIENCE}
