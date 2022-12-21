@@ -9,6 +9,9 @@ destination:
 ignoreNullFields: true
 shared: true
 action: upsert
+schedule:
+    interval: 0 * * * *
+    isPaused: false
 dataSetExternalId: src:001:sap:ds
 # Specify credentials separately like this:
 # authentication:
